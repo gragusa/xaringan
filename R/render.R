@@ -170,8 +170,8 @@ moon_reader = function(
         if (!identical(body, res$body)) c('--variable', 'math=true')
       )
     },
-    on_exit = function() {
-      unlink(c(tmp_md, tmp_js))
+    on_exit = function() {            
+      #unlink(c(tmp_md, tmp_js))
       if (self_contained) knitr::opts_knit$restore(optk)
     },
     base_format = html_document2(
